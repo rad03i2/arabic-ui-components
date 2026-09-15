@@ -17,3 +17,8 @@ Reusable front-end components designed for Arabic right-to-left interfaces.
 ## Run
 
 Open `index.html` directly in your browser.
+
+## Official links
+
+- Portfolio: https://rdwan.dev
+- Project page: https://rdwan.dev/projects/08-arabic-ui-components.html
