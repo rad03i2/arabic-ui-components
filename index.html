@@ -1,35 +1,15 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Arabic UI Components</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <nav class="nav">
-    <strong>لوحة رضوان</strong>
-    <a href="#cards">البطاقات</a>
-    <a href="#form">النموذج</a>
-  </nav>
-
-  <main class="shell">
-    <section class="hero">
-      <p>Arabic RTL UI Kit</p>
-      <h1>مكونات واجهة عربية جاهزة</h1>
-      <p>تصميم واضح، متجاوب، ومناسب للوحة تحكم أو تطبيق طالب أو مشروع ويب عربي.</p>
-    </section>
-
-    <section id="cards" class="grid"></section>
-
-    <section id="form" class="panel">
-      <h2>نموذج عربي</h2>
-      <label>اسم المشروع <input placeholder="مثال: تطبيق سيناكس" /></label>
-      <label>الوصف <textarea placeholder="اكتب وصفًا قصيرًا..."></textarea></label>
-      <button>حفظ</button>
-    </section>
-  </main>
-
-  <script src="components.js"></script>
-</body>
-</html>
+<html lang="ar" dir="rtl" data-aui-theme="light">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="معرض عملي لمكونات واجهات عربية متجاوبة ومتاحة"><title>Arabic UI Components — معرض المكونات</title><link rel="stylesheet" href="styles.css"></head>
+<body class="aui-app">
+<nav class="aui-nav" aria-label="التنقل الرئيسي"><div class="aui-container aui-nav__inner"><a class="aui-nav__brand" href="#top">Arabic UI</a><button class="aui-btn aui-btn--secondary aui-menu-button" data-aui-menu-button aria-controls="main-menu" aria-expanded="false">القائمة</button><div id="main-menu" class="aui-nav__links"><a href="#cards">البطاقات</a><a href="#alerts">التنبيهات</a><a href="#form">النماذج</a><a href="#table">الجداول</a></div></div></nav>
+<main id="top" class="aui-container aui-stack" style="padding-block:3rem">
+<header class="aui-card"><span class="aui-badge">RTL أولاً</span><h1>مكونات واجهة عربية عملية</h1><p class="aui-muted">حزمة خفيفة بلا اعتماديات لبناء واجهات عربية متجاوبة، مع خصائص منطقية لاتجاه النص وحالات تركيز واضحة ودعم الوضع الداكن.</p><div style="display:flex;gap:.6rem;flex-wrap:wrap"><a class="aui-btn aui-btn--primary" href="#form">شاهد المكونات</a><button id="theme" class="aui-btn aui-btn--secondary" type="button">تبديل المظهر</button></div></header>
+<section id="cards"><h2>بطاقات الإحصاءات</h2><div id="stats" class="aui-grid"></div></section>
+<section id="alerts" class="aui-stack"><h2>التنبيهات</h2><div class="aui-alert aui-alert--success" role="status"><div><strong>تم الحفظ</strong><p>حُفظت التغييرات بنجاح.</p></div></div><div class="aui-alert aui-alert--warning" role="status"><div><strong>تنبيه</strong><p>راجع البيانات قبل المتابعة.</p></div><button class="aui-alert__close" data-aui-dismiss aria-label="إغلاق">×</button></div></section>
+<section id="form" class="aui-card"><h2>نموذج عربي</h2><form class="aui-stack" onsubmit="event.preventDefault()"><label class="aui-field"><span class="aui-field__label">اسم المشروع</span><input class="aui-input" name="project" autocomplete="organization" placeholder="مثال: منصة عربية"><span class="aui-field__help">اكتب اسمًا واضحًا ومختصرًا.</span></label><label class="aui-field"><span class="aui-field__label">الفئة</span><select class="aui-select" name="category"><option>تطبيق ويب</option><option>لوحة تحكم</option><option>متجر</option></select></label><label class="aui-field"><span class="aui-field__label">الوصف</span><textarea class="aui-textarea" name="description" placeholder="اكتب وصفًا قصيرًا..."></textarea></label><button class="aui-btn aui-btn--primary" type="submit">حفظ</button></form></section>
+<section id="table"><h2>جدول متجاوب</h2><div class="aui-table-wrap"><table class="aui-table"><thead><tr><th>المكوّن</th><th>الحالة</th><th>الاتجاه</th></tr></thead><tbody><tr><td>شريط التنقل</td><td><span class="aui-badge">جاهز</span></td><td>RTL</td></tr><tr><td>النماذج</td><td><span class="aui-badge">جاهز</span></td><td>RTL</td></tr></tbody></table></div></section>
+<footer class="aui-muted" style="padding-block:2rem">Radwan Abdulhadi Ahmed · رضوان عبدالهادي أحمد · @rad03i2</footer>
+</main>
+<script src="components.js"></script><script>const stats=document.getElementById('stats');[{label:'المكونات',value:'8',hint:'أنماط أساسية',icon:'◈'},{label:'الاعتماديات',value:'0',hint:'JavaScript أصلي',icon:'✓'},{label:'الاتجاه',value:'RTL',hint:'خصائص CSS منطقية',icon:'↔'}].forEach(x=>stats.insertAdjacentHTML('beforeend',ArabicUI.statCard(x)));ArabicUI.init();document.getElementById('theme').addEventListener('click',()=>{const el=document.documentElement;el.dataset.auiTheme=el.dataset.auiTheme==='dark'?'light':'dark'});</script>
+</body></html>
