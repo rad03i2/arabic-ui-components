@@ -1,0 +1,12 @@
+{
+  "name": "arabic-ui-components",
+  "version": "1.0.0",
+  "description": "Dependency-free RTL-first CSS and JavaScript components for accessible Arabic web interfaces.",
+  "main": "components.js",
+  "style": "styles.css",
+  "scripts": {"test": "node --test", "check": "node --check components.js"},
+  "keywords": ["arabic", "rtl", "ui", "css", "accessibility", "components"],
+  "author": "Radwan Abdulhadi Ahmed (@rad03i2)",
+  "license": "MIT",
+  "engines": {"node": ">=18"}
+}
